@@ -8,15 +8,14 @@
     {% from "_formhelpers.html" import render_field %}
 
 <form method='post' enctype='multipart/form-data'>
-  <dl>
+  <div>
     {{ render_field(form.username) }}
     {{ render_field(form.email) }}
     {{ render_field(form.password) }}
     {{ render_field(form.confirm) }}
     {{ render_field(form.accept_tos) }}
 
-    <input type='file' name='photo'>
-  </dl>
+  </div>
   <p><input type=submit value=Register class='btn btn-info'></p>
 </form>
 </div>
