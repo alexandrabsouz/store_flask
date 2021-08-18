@@ -1,5 +1,4 @@
-from flask import render_template, session, request, url_for
-from flask_wtf import flash, redirect
+from flask import render_template, session, request, url_for, flash
 from .form import RegistrationForm
 from store import app, db 
 
@@ -18,4 +17,4 @@ def register():
         #db_session.add(user)
         flash('Thanks for registering')
         return redirect(url_for('login'))
-    return render_template('register.html', form=form)
+    return render_template('admin/register.html', form=form, title='Register')

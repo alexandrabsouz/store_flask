@@ -4,4 +4,21 @@
 
 <div class='text-center h1'>Register</div>
 
+<div class='container'>
+    {% from "_formhelpers.html" import render_field %}
+
+<form method='post' enctype='multipart/form-data'>
+  <dl>
+    {{ render_field(form.username) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.password) }}
+    {{ render_field(form.confirm) }}
+    {{ render_field(form.accept_tos) }}
+
+    <input type='file' name='photo'>
+  </dl>
+  <p><input type=submit value=Register class='btn btn-info'></p>
+</form>
+</div>
+
 {% endblock content %}
