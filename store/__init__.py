@@ -7,4 +7,4 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite///store.db'
 db = SQLAlchemy(app)
 
 
-from store import routes
+from store.admin import routes
