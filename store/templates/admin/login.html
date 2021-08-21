@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class='text-center h1'>Login</div>
+
+<div class='container'>
+    {% from "_formhelpers.html" import render_field %}
+
+<form method='post' enctype='multipart/form-data'>
+  <div>
+    {{ render_field(form.email) }}
+    {{ render_field(form.password) }}
+  </div>
+  <p><input type=submit value=Login class='btn btn-info'></p>
+</form>
+</div>
+
+{% endblock content %}
