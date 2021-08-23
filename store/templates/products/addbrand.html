@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block  content %}
+
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-3'></div>
+        <div class='col-md-6'>
+            {% include '_messages.html' %}
+            
+            {% if brands %}
+            <h2 class='text-center mt-5'>Register Brand</h2>
+            <form action='' method="POST">
+                <input type='text' name='brand' class='form.control'>
+                <input type='submit' name='register' class='btn btn-success mt-2'>
+            </form>
+
+            {% else %}
+
+            <h2 class='text-center mt-5'>Register Category</h2>
+            <form action='' method='POST'>
+                <input type='text' name='category' class='form.control'>
+                <input type='submit' name='register' class='btn btn-success mt-2'>
+            </form>
+            
+            {% endif %}
+        </div>
+        <div class='col-md-3'></div>
+    </div>
+</div>
+
+{% endblock %}
