@@ -10,6 +10,7 @@ from .models import User
 @app.get('/admin')
 def admin():
     if 'email' not in session:
+        flash('login first', 'danger')
         return redirect(url_for('login'))
     
     return render_template('admin/index.html', title='Admin Page')
